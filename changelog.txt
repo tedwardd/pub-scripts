@@ -1,0 +1,25 @@
+V.1.1 -- Current release
+-------------------------
+Key differences from version 1:
+
+	* Significantly shortened the script and improved readability
+	* Now using cases to display usage
+	* Added break for failure to change USER INFO section (add unique username)
+	* Fixed blank password loop
+
+Summary:
+	Version 1.0 had some bugs as well as a lot of extra code that was not
+	actually needed. Where version 1.0 had two unique sections in which
+	the user had to choose how they wanted the script to behave (prompt for
+	all fields or hard code all fields except for status). Version 1.1
+	combines the ideas of the individual sections in to a single section
+	that has a hard coded username (see USER INFO section of script) only.
+	The user is prompted for the password after they run the script and
+	the status message is taken from whatever is entered in quotes. For
+	example, "./identi.ca post "This is a status message."" would prompt
+	the user for their password and then post "This is a status message".
+
+To-do:
+	* Add support for catching bad authentication
+		- right now the program terminates in the same manner even if the
+		api returns a authentication failed message.
