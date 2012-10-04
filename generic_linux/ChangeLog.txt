@@ -8,5 +8,7 @@
 			+ Added better comments to the top of the batstat.sh file
 			+ Updated batstat.sh to work w/ both acpitool and acpi (generic)
 			+------------------------------------------------------------------
+			+ Changed acpi function to detect if AC power plugged in or not
+			+------------------------------------------------------------------
 
-
+###############################################################################

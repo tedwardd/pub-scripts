@@ -16,4 +16,17 @@
 #acpitool -B | grep Remaining | awk '{print $6 " " $7}'
 
 ### NO ACPITOOL
-acpi -b | awk -F, '{print $2 $3}' | awk '{print $1" - "$2}'
+
+# Check if plugged in
+plug=$(acpi -a | awk '{print $3}')
+
+# If not plugged in, show time remaining
+if [ $plug == "off-line" ]; then
+    acpi -b | awk -F, '{print $2 $3}' | awk '{print $1" - "$2}'
+# If plugged in, only show percentage
+elif [ $plug == "on-line" ]; then
+    acpi -b | awk '{print $4}'
+# This should never happen, but if it does, add a condition for it
+else
+    echo "NULL"
+fi
