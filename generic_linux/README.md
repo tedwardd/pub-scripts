@@ -4,7 +4,7 @@
 -------------------------------------------------------------------------------
 
 #### batstat.sh
-    * depends on acpi_tools
+    * depends on either acpi or acpitool packages (see comments in .sh file)
 
 #### ftpdir_auto_create.sh
     * designed to work in tandem with any ftp server.
