@@ -1,0 +1,12 @@
+###############################################################################
+2012-10-04 //
+			I must appolgize, the changelogs prior to this entry were lost in a
+			tragic hard drive formatting mistake. Hopefully, since this utility
+			is fairly straight forward, they won't be terribly missed.
+
+			+------------------------------------------------------------------
+			+ Added better comments to the top of the batstat.sh file
+			+ Updated batstat.sh to work w/ both acpitool and acpi (generic)
+			+------------------------------------------------------------------
+
+
