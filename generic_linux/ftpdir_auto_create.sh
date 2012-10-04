@@ -4,7 +4,7 @@
 # Checks if user has a directory in /var/ftp/pub, if not, it creates one
 # Checks if user has a symlink to their /var/ftp/pub directory in $HOME, if not, one is created
 #
-# Author: Ted Wood (twood8)
+# Author: Ted Wood
 # Date: 2011-11-15
 #
 
