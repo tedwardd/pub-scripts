@@ -8,4 +8,4 @@
 
 #### Changelog:
     * Thu Dec 06 2012 Ted Wood <ted.l.wood@gmail.ccom> - 0.1
-    - First release of lightctl with basic functionality
+      - First release of lightctl with basic functionality
