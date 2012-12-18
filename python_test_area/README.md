@@ -1,0 +1,1 @@
+## This directory contains files that are likely ugly, embarrassing, broken or some combination of all three. Please read through these files before running them, I cannot and will not promise that they won't rm -Rf / on your system.
