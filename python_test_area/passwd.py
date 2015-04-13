@@ -16,7 +16,6 @@ while count > 0:
     # break if the user types exit or quit
     if count == "EXIT" or count == "exit" or count == "quit" or count == "q":
         break
-        print "Good bye!"
     # break if the user enters 0 for the count value
     if int(count) < 1:
         break
