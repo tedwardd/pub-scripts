@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+# Quick and dirty script to quickly navigate to projects inside of ${GOPATH}/src
+# Source this file from $HOME/.bashrc
+#
+
+goworkon() {
+    [ -z "${GOPATH+x}" ] && (echo "\$GOPATH is not set"; exit 1)
+
+    [ $# -ne 1 ] && (echo "Must provide a project name"; exit 1)
+    project=$(find "${GOPATH}"/src -type d -name "${1}" -depth 3| head -n1)
+
+    [ -d "${project}" ] || (echo "No project named ${1} found"; exit 1)
+
+    cd "${project}" || (echo "Unable to open ${project}"; exit 1)
+}
