@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Expects input to be a Google formatted CSV file, outputs mutt aliases file
+# Input can come from stdin or as first argument
+# output is stdout
+#
+# Usage examples:
+#   stdin redirect:
+#       google-csv-to-muttalias < google.csv > $HOME/.mutt/aliases
+#
+#   stdin redirect:
+#       cat google.csv | google-csv-to-muttalias > $HOME/.mutt/aliases
+#
+#   file name as argument:
+#       google-csv-to-muttalias google.csv > $HOME/.mutt/aliases
+#
+
+[ $# -ge 1 -a -f "$1" ] && input="$1" || input="-"
+
+contents=$(cat "${input}")
+while read -r line; do
+    awk -F',' '{ print "alias \""$2"\" \""$1"\" "$29 }' <<< "${line}"
+done <<< "${contents}"
