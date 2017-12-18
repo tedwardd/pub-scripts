@@ -19,5 +19,5 @@
 
 contents=$(cat "${input}")
 while read -r line; do
-    awk -F',' '{ print "alias \""$2"\" \""$1"\" "$29 }' <<< "${line}"
+    awk -F',' '{ print "alias "$2" "$1" <"$29">" }' <<< "${line}"
 done <<< "${contents}"
